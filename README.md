@@ -43,11 +43,9 @@ Log(stack, level, package, message)
 
 ## Screenshots
 
-### Home Page
-![Home](./assets/screenshots/home.png)
+![Home](./assets/home.png)
 
-### Filter Functionality
-![Filter](./assets/screenshots/filter.png)
+![Filter](./assets/filter1.png)
 
 ### Mobile View
-![Mobile](./assets/screenshots/mobile.png)
+![Mobile](./assets/filter2.png)
