@@ -45,7 +45,7 @@ Log(stack, level, package, message)
 
 ![Home](./assets/home.png)
 
-![Filter](./assets/filter1.png)
+![Filter1](./assets/filter1.png)
 
 ### Mobile View
-![Mobile](./assets/filter2.png)
+![Filter2](./assets/filter2.png)
