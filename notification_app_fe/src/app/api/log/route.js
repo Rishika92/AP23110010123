@@ -1,0 +1,18 @@
+export async function POST(req) {
+  try {
+    const body = await req.json();
+
+    await fetch("http://20.207.122.201/evaluation-service/logs", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJyaXNoaWthX2FyaXNldHR5QHNybWFwLmVkdS5pbiIsImV4cCI6MTc3NzcwNTcyNywiaWF0IjoxNzc3NzA0ODI3LCJpc3MiOiJBZmZvcmQgTWVkaWNhbCBUZWNobm9sb2dpZXMgUHJpdmF0ZSBMaW1pdGVkIiwianRpIjoiODQxMTZlOWYtMWU2YS00NjExLThiOTAtZmQxODc4NjUxM2M4IiwibG9jYWxlIjoiZW4tSU4iLCJuYW1lIjoicmlzaGlrYSBhcmlzZXR0eSIsInN1YiI6ImYyNDg5OWZkLTdjN2EtNDY1OC05NDVhLTRlZWExODQyN2VmYyJ9LCJlbWFpbCI6InJpc2hpa2FfYXJpc2V0dHlAc3JtYXAuZWR1LmluIiwibmFtZSI6InJpc2hpa2EgYXJpc2V0dHkiLCJyb2xsTm8iOiJhcDIzMTEwMDEwMTIzIiwiYWNjZXNzQ29kZSI6IlFrYnB4SCIsImNsaWVudElEIjoiZjI0ODk5ZmQtN2M3YS00NjU4LTk0NWEtNGVlYTE4NDI3ZWZjIiwiY2xpZW50U2VjcmV0IjoiSEJTUEJRdFZCdG5mTVBzcyJ9.Y-_PYBBJhPZKcjaSEJlJ4SkSxDQi_WKAbS5yQP4ahvs",
+      },
+      body: JSON.stringify(body),
+    });
+
+    return Response.json({ success: true });
+  } catch (error) {
+    return Response.json({ success: false });
+  }
+}
